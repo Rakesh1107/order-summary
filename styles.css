@@ -35,6 +35,11 @@ img {
 body {
 	background-color: var(--pale-blue);
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
 }
 
 .btn {
@@ -44,6 +49,7 @@ body {
 	font-weight: bold;
 	font-size: 1rem;
 	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
 
 .btn-change {
@@ -56,18 +62,64 @@ body {
 	background-color: var(--bright-blue);
 	color: #fff;
 	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.btn-primary:hover, .btn-change:hover {
+	opacity: 0.8;
 }
 
 .btn-secondary {
 	background-color: transparent;
+	color: var(--desaturated-blue);
+}
+
+.btn-secondary:hover {
+	color: var(--dark-blue);
 }
 
 .container {
 	background-color: #fff;
 	margin: 200px;
-	padding: 20px;
+	padding-bottom: 20px;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px hsl(228, 45%, 44%, 0.15);
+}
+
+.container img.hero {
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+}
+
+.container .pricing {
+	margin: 30px auto ;
+	padding: 10px;
+	background-color: var(--very-pale-blue);
+	width: 90%;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container .pricing article {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .pricing article img {
+	margin-right: 10px;
+}
+
+.container .buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.container p.description {
+	padding: 0 30px;
 }
 
 p {
@@ -75,8 +127,9 @@ p {
 	color: var(--desaturated-blue);
 }
 
-h1 {
+.container h1 {
 	color: var(--dark-blue);
+	margin: 10px 0;
 }
 
 /* Attributions */
@@ -87,5 +140,9 @@ h1 {
 	.bg__image {
 		background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
 		height: 50vh;
+	}
+
+	.container {
+		width: 500px;
 	}
 }
